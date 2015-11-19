@@ -1385,7 +1385,7 @@ the specific language governing permissions and limitations under the Apache Lic
                 container = this.container,
                 offset = container.offset(),
                 height = container.outerHeight(false),
-                width = container.outerWidth(false),
+                width = container.get(0).getBoundingClientRect().width || container.outerWidth(false),
                 dropHeight = $dropdown.outerHeight(false),
                 $window = $(window),
                 windowWidth = $window.width(),
